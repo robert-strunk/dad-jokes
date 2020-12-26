@@ -1,0 +1,11 @@
+<template>
+    
+    <template if:true={isFirstJoke}>
+        <li class='currentJoke'>{joke}</li>
+    </template>
+
+    <template if:false={isFirstJoke}>
+        <li class='previousJoke'>{joke}</li>
+    </template>
+    
+</template>

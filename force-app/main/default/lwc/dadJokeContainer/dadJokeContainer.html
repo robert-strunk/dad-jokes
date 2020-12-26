@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Dad Jokes">
+
+        <lightning-button slot="actions" label="Get Dad Joke" onclick={getNewJoke}></lightning-button>
+
+        <p if:false={jokeList}>Click the button to get a dad joke!</p>
+        <template if:true={jokeList}>
+            <ul class="slds-list_dotted">                
+                <template for:each={jokeList} for:item="joke" for:index="index">
+                    <c-dad-joke key={joke} index={index} joke={joke}></c-dad-joke>
+                </template>
+            </ul>
+        </template>
+
+    </lightning-card>
+</template>
